@@ -14,7 +14,7 @@ endmodule
 module add1 ( input a, input b, input cin,   output sum, output cout );
 
     /* Method 1 */
-    assign {cout,sum} = a + b + cin;
+    // assign {cout,sum} = a + b + cin;
     /* Method 1 */
     
     /* Method 2 */
@@ -23,6 +23,8 @@ module add1 ( input a, input b, input cin,   output sum, output cout );
     
     /* Method 3 */
     // from truth table
+    assign sum = (~a & ~b & cin) | (~a & b & ~cin) | (a & ~b & ~cin) | (a & b & cin);
+    assign cout = (~a & b & cin) | (a & ~b & cin) | (a & b & ~cin) | (a & b & cin); 
     /* Method 3 */
 // Full adder module here
 
