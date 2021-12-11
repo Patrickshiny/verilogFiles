@@ -27,7 +27,7 @@ module top_module (
                 4'b1011:
                     pos = 2'b00;
                 4'b0111:
-					pos = 2'b00;
+		    pos = 2'b00;
                 4'b1111:
                     pos = 2'b00;
                 /* Method 2 */
@@ -62,7 +62,7 @@ module top_module (
                 
                 4'b1000:
                     // pos = 2'd3;
-					pos = 2'b11;
+	            pos = 2'b11;
                     default:
                     pos = 2'd0;
             endcase
